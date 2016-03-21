@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JQuery选择器</title>
+		<style>
+			#bt01{
+				width: 100%;
+				height: 80px;
+			}
+			.bt{
+				width: 100%;
+				height: 70px;
+			}
+		</style>
+		<script src="js/jquery-1.11.0.js"></script>
+	</head>
+	<body>
+		<input type="button" value="test1" id="bt01"><br>
+		<input type="button" value="test2" class="bt"><br>
+		<input type="button" value="test3" class="bt"><br>
+		<p>三种不同的选择器</p>
+		<script>
+			$(document).ready(function(){
+				$("#bt01").click(function(){
+					$("#bt01").hide();//隐藏这个对象
+				});
+				$(".bt").click(function(){
+					$(".bt").hide();
+				});
+				$("p").click(function(){
+					$("#bt01").show();
+					$(".bt").show();//显示对象
+				});
+			});
+		</script>
+	</body>
+</html>

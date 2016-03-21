@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>bind函数事件编程</title>
+		<script src="js/jquery-1.11.0.js"></script>
+	</head>
+	<body>
+		<div id="divmsg">你好啊世界</div>
+		<input  type="button" id="bt01" value="隐藏"><br>
+		<input  type="button" id="bt02" value="显示"><br>
+		<input  type="button" id="bt03" value="修改内容">
+		<script>
+			$(document).ready(function(){
+				$("#bt01").bind("click",function(){
+					$("#divmsg").hide();
+				});
+				$("#bt02").bind("click",function(){
+					$("#divmsg").show();
+				});
+				$("#bt03").bind("click",function(){
+					$("#divmsg").html("bind函数修改divmsg内容");
+				});
+			});
+		</script>
+	</body>
+</html>

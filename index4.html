@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>选择器的组合</title>
+		<script src="js/jquery-1.11.0.js"></script>
+	</head>
+	<body>
+		<p>谷歌啊</p>
+		<p>对啊</p>
+		<div>
+			<img src="http://www.ctsbw.com/uploadfile/2016/0212/20160212054159532.jpg" width="30%" height="30%">
+		</div>
+		<input  type="button" id="bt01" value="p标签全部隐藏"><br>
+		<input  type="button" id="bt02" value="全部显示"><br>
+		<input  type="button" id="bt03" value="div,p隐藏">
+		<script>
+			$(document).ready(function(){
+				$("#bt01").click(function(){
+					$("p").hide();	
+				});
+				$("#bt02").click(function(){
+					$("*").show();
+				});
+				$("#bt03").click(function(){
+					$("div,p").hide();
+				});
+			});
+		</script>				
+						
+	</body>
+</html>

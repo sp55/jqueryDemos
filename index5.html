@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>css函数的调用</title>
+		<style>
+			div{
+				width: 200px;
+				height: 200px;
+				background-color: #afafaf;
+			}
+		</style>
+		<script src="js/jquery-1.11.0.js"></script>
+	</head>
+	<body>
+		<div></div>
+		<input  type="button" id="bt01" value="红">
+		<input  type="button" id="bt02" value="绿">
+		<input  type="button" id="bt03" value="蓝">
+		<input  type="button" id="bt04" value="缩小">
+		<script> 
+			$(document).ready(function(){
+				$("#bt01").click(function(){
+					//修改div样式
+					$("div").css("background-color","red");
+				});
+				$("#bt02").click(function(){
+					$("div").css("background-color","green");
+				});
+				$("#bt03").click(function(){
+					$("div").css("background-color","blue");
+				});
+				$("#bt04").click(function(){
+					$("div").css({"width":"50px",
+								 "height":"50px"});
+				});
+			});
+		</script>
+	</body>
+</html>

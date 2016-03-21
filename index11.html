@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>属性过滤器</title>
+		<script src="js/jquery-1.11.0.js"></script>
+	</head>
+	<body>
+		<img src="http://www.ctsbw.com/uploadfile/2016/0212/20160212054159532.jpg" width="30%" height="30%"><br
+		<img src="http://www.ctsbw.com/uploadfile/2016/0212/20160212054159532.jpg" width="20%" alt="你好"><br>
+	<script>
+		$(function(){
+			$("img[height]").css("border","1px solid red");
+			$("img[alt*='好']").css("border","5px solid green");
+		});
+	</script>
+	</body>
+</html>
